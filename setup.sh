@@ -12,5 +12,7 @@ echo "Starting setup..."
 ./modules/flatpak.sh
 ./modules/fonts.sh
 ./modules/starship.sh
+./modules/devtools.sh
+./modules/cleanup.sh
 
 echo "Setup complete!"
