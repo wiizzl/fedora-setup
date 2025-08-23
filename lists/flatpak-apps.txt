@@ -1,0 +1,3 @@
+com.mattjakeman.ExtensionManager
+org.gnome.World.PikaBackup
+io.podman_desktop.PodmanDesktop
