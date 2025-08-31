@@ -1,3 +1,5 @@
+fuse
+libfuse2
 git
 curl
 wget
@@ -9,3 +11,4 @@ podman
 podman-compose
 discord
 showtime
+steam
