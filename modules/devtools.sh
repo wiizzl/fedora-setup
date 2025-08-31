@@ -2,7 +2,7 @@
 
 echo "Installing Warp..."
 
-curl -Lo /tmp/warp.rpm "https://app.warp.dev/get_warp?package=rpm"
+curl -Lo /tmp/warp.rpm "https://app.warp.dev/download?package=rpm"
 sudo dnf install -y /tmp/warp.rpm
 rm -f /tmp/warp.rpm
 
@@ -16,10 +16,7 @@ sudo dnf install -y code
 
 echo "Installing JetBrains Toolbox..."
 
-curl -s 'https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release' | \
-  jq -r '.TBA[0].downloads.linux.link' | \
-  xargs -I{} curl -Lo /tmp/toolbox.tar.gz {}
-
-mkdir -p "$HOME/.local/share/JetBrains/Toolbox"
-tar -xzf /tmp/toolbox.tar.gz --strip-components=1 -C "$HOME/.local/share/JetBrains/Toolbox"
+curl -Lo /tmp/toolbox.tar.gz "$(curl -s "https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release" | grep -oP '"linux":{"link":"\K[^"]+')"
+tar -xvzf /tmp/toolbox.tar.gz
 rm -f /tmp/toolbox.tar.gz
+./jetbrains-toolbox-*/bin/jetbrains-toolbox &

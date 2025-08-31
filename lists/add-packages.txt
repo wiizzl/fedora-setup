@@ -3,9 +3,8 @@ curl
 wget
 gnome-tweaks
 gnome-themes-extra
-dnfdragora
 fastfetch
 btop
 podman
 podman-compose
-vlc
+discord

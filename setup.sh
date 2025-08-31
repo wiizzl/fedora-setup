@@ -30,10 +30,4 @@ bash "$SCRIPT_DIR/modules/starship.sh"
 bash "$SCRIPT_DIR/modules/devtools.sh"
 bash "$SCRIPT_DIR/modules/cleanup.sh"
 
-if command -v needs-restarting >/dev/null 2>&1; then
-  if ! needs-restarting -r >/dev/null 2>&1; then
-    echo "A reboot is recommended to complete updates."
-  fi
-fi
-
-echo "Setup complete!"
+echo "Setup complete! A reboot is recommended to ensure all changes take effect."
