@@ -29,7 +29,6 @@ bash "$SCRIPT_DIR/modules/fonts.sh"
 bash "$SCRIPT_DIR/modules/starship.sh"
 bash "$SCRIPT_DIR/modules/devtools.sh"
 bash "$SCRIPT_DIR/modules/onlyoffice.sh"
-bash "$SCRIPT_DIR/modules/brave.sh"
 bash "$SCRIPT_DIR/modules/cleanup.sh"
 
 echo "Setup complete! A reboot is recommended to ensure all changes take effect."
