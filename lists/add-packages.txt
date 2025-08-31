@@ -8,3 +8,4 @@ btop
 podman
 podman-compose
 discord
+showtime
