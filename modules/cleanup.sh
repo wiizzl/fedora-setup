@@ -2,5 +2,5 @@
 
 echo "Cleaning up..."
 
-sudo dnf clean all
 sudo dnf autoremove -y
+sudo dnf clean all

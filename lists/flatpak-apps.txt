@@ -1,3 +1,6 @@
 com.mattjakeman.ExtensionManager
 org.gnome.World.PikaBackup
 io.podman_desktop.PodmanDesktop
+com.spotify.Client
+com.github.tchx84.Flatseal
+app.zen_browser.zen
