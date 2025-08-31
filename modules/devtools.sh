@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo "Installing Warp..."
+
+curl -Lo /tmp/warp.rpm "https://app.warp.dev/get_warp?package=rpm"
+sudo dnf install -y /tmp/warp.rpm
+rm -f /tmp/warp.rpm
+
 echo "Installing VSCode..."
 
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
