@@ -1,12 +1,9 @@
 git
 curl
 wget
-gnome-tweaks
-gnome-themes-extra
 fastfetch
 btop
 podman
-podman-compose
 discord
-showtime
+vlc
 steam

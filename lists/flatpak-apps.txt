@@ -1,5 +1,3 @@
-com.mattjakeman.ExtensionManager
-org.gnome.World.PikaBackup
 io.podman_desktop.PodmanDesktop
 com.spotify.Client
 com.github.tchx84.Flatseal
@@ -7,7 +5,6 @@ app.zen_browser.zen
 it.mijorus.gearlever
 com.github.unrud.VideoDownloader
 eu.betterbird.Betterbird
-org.localsend.localsend_app
 rest.insomnia.Insomnia
 io.dbeaver.DBeaverCommunity
 io.gitlab.adhami3310.Impression
