@@ -1,3 +1,4 @@
+com.mattjakeman.ExtensionManager
 io.podman_desktop.PodmanDesktop
 com.spotify.Client
 com.github.tchx84.Flatseal

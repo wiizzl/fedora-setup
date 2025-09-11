@@ -1,6 +1,8 @@
 git
 curl
 wget
+gnome-tweaks
+gnome-themes-extra
 fastfetch
 btop
 podman

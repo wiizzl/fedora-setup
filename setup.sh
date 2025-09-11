@@ -11,7 +11,7 @@ echo "Starting setup..."
 
 sudo chmod +x "$SCRIPT_DIR"/modules/*.sh || true
 
-bash "$SCRIPT_DIR/modules/dnf.sh"
+bash "$SCRIPT_DIR/modules/dnf.sh"g
 bash "$SCRIPT_DIR/modules/rpmfusion.sh"
 bash "$SCRIPT_DIR/modules/update.sh"
 bash "$SCRIPT_DIR/modules/packages.sh"
