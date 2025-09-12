@@ -1,0 +1,23 @@
+---
+- name: Install packages
+  ansible.builtin.dnf:
+    name:
+      - git
+      - curl
+      - wget
+      - gnome-tweaks
+      - gnome-themes-extra
+      - fastfetch
+      - btop
+      - podman
+      - discord
+      - vlc
+    state: present
+
+- name: Remove packages
+  ansible.builtin.dnf:
+    name:
+      - firefox
+      - libreoffice-date
+    state: absent
+    autoremove: true

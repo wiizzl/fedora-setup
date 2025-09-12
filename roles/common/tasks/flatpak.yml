@@ -1,0 +1,29 @@
+---
+- name: Remove fedora flatpak remote
+  become: true
+  ansible.builtin.command: flatpak remote-delete fedora
+  ignore_errors: true
+
+- name: Add flathub flatpak remote if not exists
+  become: true
+  ansible.builtin.command: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+- name: Update flatpak appstream data
+  become: true
+  ansible.builtin.command: flatpak update --appstream -y
+
+- name: Install flatpak packages
+  community.general.flatpak:
+    name:
+      - com.mattjakeman.ExtensionManager
+      - io.podman_desktop.PodmanDesktop
+      - com.spotify.Client
+      - com.github.tchx84.Flatseal
+      - app.zen_browser.zen
+      - it.mijorus.gearlever
+      - com.github.unrud.VideoDownloader
+      - eu.betterbird.Betterbird
+      - rest.insomnia.Insomnia
+      - io.dbeaver.DBeaverCommunity
+      - io.gitlab.adhami3310.Impression
+    state: present

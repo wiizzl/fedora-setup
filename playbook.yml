@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  become: true
+  vars_files:
+    - variables/versions.yml
+  roles:
+    - common
+    - gnome

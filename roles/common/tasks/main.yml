@@ -1,0 +1,5 @@
+- name: Install rpmfusion
+  ansible.builtin.include_tasks: rpmfusion.yml
+
+- name: Install & remove packages
+  ansible.builtin.include_tasks: packages.yml

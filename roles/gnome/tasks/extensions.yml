@@ -1,0 +1,7 @@
+---
+- name: Install GNOME extensions
+  include_role:
+    name: lordtaytertot.gnome-extensions
+  vars:
+    gnome_extension_ids:
+      -

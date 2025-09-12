@@ -1,13 +1,10 @@
-# fedora-setup
-
-1. Give execution permissions
+# Run playbook
 
 ```
-sudo chmod +x ./setup.sh
+sudo dnf install -y ansible-core
 ```
 
-2. Run script
-
 ```
-./setup.sh
+ansible-playbook playbook.yml --ask-become-pass
+
 ```

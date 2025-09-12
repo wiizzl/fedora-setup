@@ -1,0 +1,2 @@
+# - name: Install GNOME extensions
+#   ansible.builtin.include_tasks: extensions.yml
