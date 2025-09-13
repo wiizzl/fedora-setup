@@ -1,7 +1,7 @@
 # Run playbook
 
 ```
-sudo dnf install -y ansible-core
+sudo dnf install -y ansible-core python3-psutil
 ```
 
 ```
