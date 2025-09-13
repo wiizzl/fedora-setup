@@ -1,5 +1,9 @@
 # fedora-setup
 
+## Variables
+
+Edit [`variables`](./variables.yml) to match your preferences
+
 ## Deps
 
 ```
