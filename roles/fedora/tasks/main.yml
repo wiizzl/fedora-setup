@@ -3,10 +3,11 @@
   ansible.builtin.blockinfile:
     path: /etc/dnf/dnf.conf
     block: |
+
       install_weak_deps=False
       max_parallel_downloads=10
       fastestmirror=True
-    marker_begin: "\n"
+    marker: "# {mark} ANSIBLE MANAGED BLOCK - DNF CONFIG"
     insertafter: EOF
 
 - name: Update all packages
