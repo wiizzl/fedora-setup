@@ -6,6 +6,5 @@
       - curl
       - wget
       - fastfetch
-      - btop
       - vlc
     state: present
