@@ -65,8 +65,8 @@
     - pflannery.vscode-versionlens
     - redhat.vscode-yaml
 
-- name: Apply VS Code settings
-  ansible.builtin.copy:
-    src: "{{ vscode_settings }}"
+- name: Download VS Code settings
+  ansible.builtin.get_url:
+    url: "https://gist.githubusercontent.com/wiizzl/4b221506171597a4eec703b8f0c23998/raw/config.json"
     dest: "{{ ansible_env.HOME }}/.config/Code/User/settings.json"
-    remote_src: true
+    mode: "0644"
