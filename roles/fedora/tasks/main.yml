@@ -10,5 +10,8 @@
 - name: Install & remove packages
   include_tasks: packages.yml
 
+- name: Setup Flatpak
+  include_tasks: flatpak.yml
+
 - name: Configure GNOME
   include_tasks: gnome.yml

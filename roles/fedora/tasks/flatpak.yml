@@ -1,16 +1,14 @@
 ---
 - name: Remove fedora flatpak remote
-  become: true
-  ansible.builtin.command: flatpak remote-delete fedora
-  ignore_errors: true
+  community.general.flatpak_remote:
+    name: fedora
+    state: absent
 
-- name: Add flathub flatpak remote if not exists
-  become: true
-  ansible.builtin.command: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-- name: Update flatpak appstream data
-  become: true
-  ansible.builtin.command: flatpak update --appstream -y
+- name: Add flathub flatpak remote
+  community.general.flatpak_remote:
+    name: flathub
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+    state: present
 
 - name: Install flatpak packages
   community.general.flatpak:
