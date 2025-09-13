@@ -9,4 +9,4 @@
   ansible.builtin.command: /tmp/install_nvm.sh
 
 - name: Install Node
-  ansible.builtin.command: nvm install {{ node }}
+  ansible.builtin.shell: ". {{ ansible_env.SUDO_HOME }}/.nvm/nvm.sh && nvm install {{ node }}"

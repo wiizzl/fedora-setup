@@ -1,6 +1,3 @@
 ---
 collections:
   - community.general
-
-roles:
-  - name: PeterMosmans.customize-gnome

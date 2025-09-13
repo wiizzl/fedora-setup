@@ -1,3 +1,2 @@
-- include_tasks: gnome.yml
 - include_tasks: onlyoffice.yml
 - include_tasks: ghostty.yml

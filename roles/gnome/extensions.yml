@@ -1,0 +1,13 @@
+---
+- name: Installer des extensions GNOME spécifiques
+  ansible.builtin.command: gnome-extensions install {{ item }}
+  loop:
+    - clipboard-indicator@tudmotu.com
+    - Vitals@CoreCoding.com
+    - just-perfection-desktop@just-perfection
+    - CoverflowAltTab@palatis.blogspot.com
+    - compiz-alike-magic-lamp-effect@hermes83.github.com
+    - compiz-windows-effect@hermes83.github.com
+    - dash-to-dock@micxgx.gmail.com
+    - blur-my-shell@aunetx
+    - color-picker@tuberry
