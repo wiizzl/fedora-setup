@@ -13,13 +13,11 @@
       - discord
       - vlc
     state: present
-
-- name: Remove packages
-  ansible.builtin.dnf:
-    name:
-      - libreoffice-data
-      - firefox
-    state: absent
-    autoremove: true
-  vars:
-    ansible_dnf_args: "--allowerasing"
+#
+# - name: Remove packages
+#   ansible.builtin.dnf:
+#     name:
+#       - libreoffice-data
+#       - firefox
+#     state: absent
+#     autoremove: true
