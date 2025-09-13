@@ -20,7 +20,7 @@
 
 - name: Install VS Code extensions
   become: false
-  ansible.builtin.command: code --install-extension {{ item }}
+  ansible.builtin.command: code --install-extension {{ item }} --force
   loop:
     - astro-build.astro-vscode
     - formulahendry.auto-close-tag
