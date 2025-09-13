@@ -17,7 +17,6 @@
 - name: Remove packages
   ansible.builtin.dnf:
     name:
-      - firefox
-      - libreoffice-date
+      - libreoffice-data
     state: absent
     autoremove: true
