@@ -1,6 +1,6 @@
 ---
 - name: Enable Starship copr repo
-  comunity.general.copr:
+  community.general.copr:
     name: atim/starship
     state: enabled
 

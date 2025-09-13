@@ -1,6 +1,6 @@
 ---
 - name: Enable Ghostty copr repo
-  comunity.general.copr:
+  community.general.copr:
     name: scottames/ghostty
     state: enabled
 
