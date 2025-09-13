@@ -3,5 +3,6 @@
   become: true
   vars_files:
     - variables/versions.yml
+    - variables/links.yml
   roles:
     - common
