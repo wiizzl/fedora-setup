@@ -3,8 +3,7 @@
   become: false
   ansible.builtin.debug:
     msg:
-      - "User: {{ ansible_facts['ansible_user_id'] }}"
-      - "Home: {{ ansible_facts['ansible_user_dir'] }}"
+      - "Home: {{ ansible_env.HOME }}"
 
 - name: Speed up DNF
   ansible.builtin.blockinfile:
