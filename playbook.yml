@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   become: true
+  become_user: "{{ ansible_user_id }}"
   vars_files:
     - variables/versions.yml
     - variables/links.yml
