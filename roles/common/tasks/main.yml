@@ -1,5 +1,6 @@
 ---
 - name: Display user info
+  become: false
   ansible.builtin.debug:
     msg:
       - "User: {{ ansible_facts['ansible_user_id'] }}"
