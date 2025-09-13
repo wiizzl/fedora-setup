@@ -12,7 +12,7 @@
 - name: Activite Starship for bash
   ansible.builtin.lineinfile:
     path: "{{ ansible_env.SUDO_HOME }}/.bashrc"
-    line: 'eval "$(starship init bash)"'
+    line: '\n#Starship\neval "$(starship init bash)"'
     insertafter: EOF
     state: present
 

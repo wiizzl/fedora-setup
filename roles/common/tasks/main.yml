@@ -25,6 +25,7 @@
 
 - name: Update firmwares
   include_tasks: firmwares.yml
+  when: ansible_facts['virtualization_role'] != 'guest'
 
 - name: Install video codecs
   include_tasks: codecs.yml
