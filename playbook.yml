@@ -1,7 +1,6 @@
 ---
 - hosts: localhost
   become: true
-  become_user: ansible_env.USERNAME
   vars_files: variables.yml
   roles:
     - common
