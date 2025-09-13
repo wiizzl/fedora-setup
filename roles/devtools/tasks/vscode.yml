@@ -14,7 +14,7 @@
     gpgcheck: true
 
 - name: Install VS Code
-  ansible.builtin.package:
+  ansible.builtin.dnf:
     name: code
     state: present
 
