@@ -1,10 +1,4 @@
 ---
-- name: Display user info
-  become: false
-  ansible.builtin.debug:
-    msg:
-      - "Home: {{ ansible_env.HOME }}"
-
 - name: Speed up DNF
   ansible.builtin.blockinfile:
     path: /etc/dnf/dnf.conf
