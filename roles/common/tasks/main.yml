@@ -1,4 +1,11 @@
 ---
+- name: Display user info
+  ansible.builtin.debug:
+    msg:
+      - "User: {{ ansible_user_id }}"
+      - "Home: {{ ansible_user_dir }}"
+      - "Shell: {{ ansible_env.SHELL }}"
+
 - name: Speed up DNF
   ansible.builtin.blockinfile:
     path: /etc/dnf/dnf.conf
