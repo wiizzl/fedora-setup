@@ -4,6 +4,9 @@
     name: "*"
     state: latest
 
+- name: Setup RPMFusion
+  include_tasks: rpmfusion.yml
+
 - name: Install & remove packages
   include_tasks: packages.yml
 

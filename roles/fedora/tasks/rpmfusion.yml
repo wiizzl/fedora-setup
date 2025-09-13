@@ -1,5 +1,5 @@
 ---
-- name: Install rpmfusion repo
+- name: Install RPMFusion repositories
   ansible.builtin.dnf:
     name:
       - http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ fedora_current }}.noarch.rpm

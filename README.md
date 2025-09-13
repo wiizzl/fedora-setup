@@ -1,11 +1,11 @@
 # Run playbook
 
 ```
-ansible-galaxy collection install community.general
+sudo dnf install -y ansible-core
 ```
 
 ```
-sudo dnf install -y ansible-core
+ansible-galaxy collection install community.general
 ```
 
 ```
