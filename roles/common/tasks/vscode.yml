@@ -16,4 +16,5 @@
 - name: Install VS Code
   ansible.builtin.package:
     name: code
+    update_cache: true
     state: present
