@@ -1,0 +1,39 @@
+---
+# - name: Récupérer le lien de téléchargement de JetBrains Toolbox
+#   ansible.builtin.uri:
+#     url: "https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release"
+#     return_content: yes
+#   register: json_response
+
+# - name: Extraire le lien de téléchargement
+#   ansible.builtin.set_fact:
+#     download_url: "{{ json_response.content | regex_search('\"linux\":{\\\"link\\\":\\\"([^\"]+)') | regex_replace('\"linux\":{\\\"link\\\":\\\"([^\"]+)', '\\1') }}"
+
+# - name: Télécharger JetBrains Toolbox
+#   ansible.builtin.get_url:
+#     url: "{{ download_url }}"
+#     dest: "/tmp/toolbox.tar.gz"
+
+# - name: Extraire l'archive
+#   ansible.builtin.unarchive:
+#     src: "/tmp/toolbox.tar.gz"
+#     dest: "/tmp/"
+#     remote_src: yes
+
+# - name: Créer le répertoire de destination s'il n'existe pas
+#   ansible.builtin.file:
+#     path: "$HOME/.local/share/JetBrains/Toolbox/bin"
+#     state: directory
+#     mode: "0755"
+
+# - name: Déplacer le binaire de JetBrains Toolbox
+#   ansible.builtin.command: >
+#     mv /tmp/jetbrains-toolbox-* /jetbrains-toolbox
+#     "$HOME/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox"
+#   args:
+#     creates: "$HOME/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox"
+
+# - name: Nettoyer l'archive téléchargée
+#   ansible.builtin.file:
+#     path: "/tmp/toolbox.tar.gz"
+#     state: absent

@@ -20,6 +20,5 @@
       - totem
       - totem-plugins
       - gnome-tour
-      - ptyxis
     state: absent
     autoremove: true

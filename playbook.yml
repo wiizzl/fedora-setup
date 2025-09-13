@@ -5,5 +5,3 @@
     - variables/versions.yml
   roles:
     - common
-    - fedora
-    # - user

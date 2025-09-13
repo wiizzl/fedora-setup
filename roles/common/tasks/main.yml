@@ -1,1 +1,48 @@
 ---
+- name: Speed up dnf
+  ansible.builtin.blockinfile:
+    path: /etc/dnf/dnf.conf
+    block: |
+      install_weak_deps=False
+      max_parallel_downloads=10
+      fastestmirror=True
+    marker: "# {mark} ANSIBLE MANAGED BLOCK - DNF CONFIG"
+    insertafter: EOF
+
+- name: Update all packages
+  ansible.builtin.dnf:
+    name: "*"
+    state: latest
+
+- name: Setup RPMFusion
+  include_tasks: rpmfusion.yml
+
+- name: Install & remove packages
+  include_tasks: packages.yml
+
+- name: Setup Flatpak
+  include_tasks: flatpak.yml
+
+- name: Update firmware
+  include_tasks: firmware.yml
+
+- name: Install video codecs
+  include_tasks: codecs.yml
+
+- name: Setup Starship
+  include_tasks: starship.yml
+
+- name: Setup OnlyOffice
+  include_tasks: onlyoffice.yml
+
+- name: Setup Ghostty
+  include_tasks: ghostty.yml
+
+- name: Setup VS Code
+  include_tasks: vscode.yml
+
+- name: Setup JetBrains Toolbox
+  include_tasks: jetbrains.yml
+
+- name: Configure GNOME
+  include_tasks: gnome.yml

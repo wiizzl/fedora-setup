@@ -1,0 +1,17 @@
+---
+- name: Enable Starship copr repo
+  comunity.general.copr:
+    name: atim/starship
+    state: enabled
+
+- name: Install Starship
+  ansible.builtin.dnf:
+    name: starship
+    state: present
+
+- name: Activite Starship for bash
+  ansible.builtin.lineinfile:
+    path: ~/.bashrc
+    line: 'eval "$(starship init bash)"'
+    insertafter: EOF
+    state: present

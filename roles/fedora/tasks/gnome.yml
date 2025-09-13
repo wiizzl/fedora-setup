@@ -1,5 +1,0 @@
----
-- name: Enable touchpad tap-to-click
-  community.general.dconf:
-    key: /org/gnome/desktop/peripherals/touchpad/tap-to-click
-    value: "true"

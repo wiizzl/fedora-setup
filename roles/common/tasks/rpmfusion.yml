@@ -1,8 +1,8 @@
 ---
 - name: Import RPMFusion GPG keys
   ansible.builtin.rpm_key:
-    state: present
     key: "{{ item }}"
+    state: present
   loop:
     - https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-{{ rpmfusion_keys }}
     - https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-{{ rpmfusion_keys }}
