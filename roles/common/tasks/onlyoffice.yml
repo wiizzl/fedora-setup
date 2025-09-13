@@ -1,4 +1,9 @@
 ---
+- name: Import OnlyOffice GPG keys
+  ansible.builtin.rpm_key:
+    key: https://download.onlyoffice.com/GPG-KEY-ONLYOFFICE
+    state: present
+
 - name: Install Onlyoffice repositorie
   ansible.builtin.dnf:
     name: https://download.onlyoffice.com/repo/centos/main/noarch/onlyoffice-repo.noarch.rpm
