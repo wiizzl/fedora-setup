@@ -15,3 +15,6 @@
     line: 'eval "$(starship init bash)"'
     insertafter: EOF
     state: present
+
+- name: Enable Nerd Fonts icons for Starship
+  ansible.builtin.command: starship preset nerd-font-symbols -o ~/.config/starship.toml
