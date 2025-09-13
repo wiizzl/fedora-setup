@@ -2,9 +2,8 @@
 - name: Display user info
   ansible.builtin.debug:
     msg:
-      - "User: {{ ansible_user_id }}"
-      - "Home: {{ ansible_user_dir }}"
-      - "Shell: {{ ansible_env.SHELL }}"
+      - "User: {{ ansible_facts['ansible_user_id'] }}"
+      - "Home: {{ ansible_facts['ansible_user_dir'] }}"
 
 - name: Speed up DNF
   ansible.builtin.blockinfile:
