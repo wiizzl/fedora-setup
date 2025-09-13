@@ -11,8 +11,6 @@
       - podman
       - discord
       - vlc
-      - go
-      - dotnet-sdk-{{ dotnet }}
     state: present
 
 - name: Remove packages

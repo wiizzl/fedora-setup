@@ -1,0 +1,10 @@
+---
+- name: Install Podman engine
+  ansible.builtin.dnf:
+    name: podman
+    state: present
+
+- name: Install Podman desktop
+  community.general.flatpak:
+    name: io.podman_desktop.PodmanDesktop
+    state: present

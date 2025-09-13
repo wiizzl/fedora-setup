@@ -9,10 +9,17 @@
     name: starship
     state: present
 
-- name: Activite Starship for bash
+- name: Enable Starship for bash
   ansible.builtin.lineinfile:
     path: "{{ ansible_env.SUDO_HOME }}/.bashrc"
     line: '\n#Starship\neval "$(starship init bash)"'
+    insertafter: EOF
+    state: present
+
+- name: Enable Starship for Fish
+  ansible.builtin.lineinfile:
+    path: "{{ ansible_env.SUDO_HOME }}/.config/fish/config.fish"
+    line: '\n#Starship\nstarship init fish | source'
     insertafter: EOF
     state: present
 

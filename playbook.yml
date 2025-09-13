@@ -1,8 +1,10 @@
 ---
 - hosts: localhost
   become: true
-  vars_files:
-    - variables/versions.yml
-    - variables/links.yml
+  become_user: ansible_env.USERNAME
+  vars_files: variables.yml
   roles:
     - common
+    - system
+    - desktop
+    - devtools

@@ -14,7 +14,6 @@
   community.general.flatpak:
     name:
       - com.mattjakeman.ExtensionManager
-      - io.podman_desktop.PodmanDesktop
       - com.spotify.Client
       - com.github.tchx84.Flatseal
       - app.zen_browser.zen
