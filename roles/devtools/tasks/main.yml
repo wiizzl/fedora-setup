@@ -3,7 +3,9 @@
 - include_tasks: golang.yml
 - include_tasks: dotnet.yml
 - include_tasks: rust.yml
-- include_tasks: javascript.yml
+- include_tasks: node.yml
+- include_tasks: bun.yml
+- include_tasks: java.yml
 - include_tasks: python.yml
 - include_tasks: podman.yml
 - include_tasks: fish.yml

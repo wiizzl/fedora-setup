@@ -1,0 +1,7 @@
+---
+- name: Install Java
+  ansible.builtin.dnf:
+    name:
+      - java-{{ java }}-openjdk.x86_64
+      - java-{{ java }}-openjdk-devel.x86_64
+    state: present

@@ -1,0 +1,12 @@
+---
+- name: Download nvm install script
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh
+    dest: /tmp/install_nvm.sh
+    mode: "0755"
+
+- name: Install Node Version Manager (nvm)
+  ansible.builtin.command: /tmp/install_nvm.sh
+
+- name: Install Node
+  ansible.builtin.command: nvm install {{ node }}

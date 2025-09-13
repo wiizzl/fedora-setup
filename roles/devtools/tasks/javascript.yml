@@ -1,9 +1,0 @@
----
-- name: Install Node Version Manager (nvm)
-  ansible.builtin.command: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
-
-- name: Install Node.js
-  ansible.builtin.command: nvm install {{ node }}
-
-- name: Install Bun
-  ansible.builtin.command: curl -fsSL https://bun.com/install | bash
