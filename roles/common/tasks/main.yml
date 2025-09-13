@@ -1,5 +1,5 @@
 ---
-- name: Speed up dnf
+- name: Speed up DNF
   ansible.builtin.blockinfile:
     path: /etc/dnf/dnf.conf
     block: |
