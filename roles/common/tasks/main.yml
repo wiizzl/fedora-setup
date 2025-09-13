@@ -6,7 +6,7 @@
       install_weak_deps=False
       max_parallel_downloads=10
       fastestmirror=True
-    marker: "# {mark} ANSIBLE MANAGED BLOCK - DNF CONFIG"
+    marker: "# {mark} DNF config (managed by Ansible)"
     insertafter: EOF
 
 - name: Update all packages
@@ -23,8 +23,8 @@
 - name: Setup Flatpak
   include_tasks: flatpak.yml
 
-- name: Update firmware
-  include_tasks: firmware.yml
+- name: Update firmwares
+  include_tasks: firmwares.yml
 
 - name: Install video codecs
   include_tasks: codecs.yml
