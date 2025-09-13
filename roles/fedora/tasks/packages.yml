@@ -6,18 +6,20 @@
       - curl
       - wget
       - gnome-tweaks
-      - gnome-themes-extra
       - fastfetch
       - btop
       - podman
       - discord
       - vlc
     state: present
-#
-# - name: Remove packages
-#   ansible.builtin.dnf:
-#     name:
-#       - libreoffice-data
-#       - firefox
-#     state: absent
-#     autoremove: true
+
+- name: Remove packages
+  ansible.builtin.dnf:
+    name:
+      - rythmbox
+      - totem
+      - totem-plugins
+      - gnome-tour
+      - ptyxis
+    state: absent
+    autoremove: true
