@@ -1,2 +1,2 @@
 ---
-include_tasks: extensions.yml
+- include_tasks: extensions.yml
