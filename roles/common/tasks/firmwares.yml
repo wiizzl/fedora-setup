@@ -1,6 +1,0 @@
----
-- name: Refresh firmwares metadata
-  ansible.builtin.command: fwupdmgr refresh --force
-
-- name: Update firmwares
-  ansible.builtin.command: fwupdmgr update --assume-yes
