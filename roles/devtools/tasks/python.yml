@@ -1,3 +1,9 @@
 ---
-- name: Install UV package manager
-  ansible.builtin.command: curl -LsSf https://astral.sh/uv/install.sh | sh
+- name: Download UV install script
+  ansible.builtin.get_url:
+    url: https://astral.sh/uv/install.sh
+    dest: /tmp/install_uv.sh
+    mode: "0755"
+
+- name: Install UV
+  ansible.builtin.command: /tmp/install_uv.sh
