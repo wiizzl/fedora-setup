@@ -10,17 +10,14 @@
     flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
     state: present
 
-- name: Install flatpak packages
+- name: Install common flatpak packages
   community.general.flatpak:
     name:
-      - com.mattjakeman.ExtensionManager
       - com.spotify.Client
       - com.github.tchx84.Flatseal
       - app.zen_browser.zen
       - it.mijorus.gearlever
       - com.github.unrud.VideoDownloader
       - eu.betterbird.Betterbird
-      - rest.insomnia.Insomnia
-      - io.dbeaver.DBeaverCommunity
       - io.gitlab.adhami3310.Impression
     state: present

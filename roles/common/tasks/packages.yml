@@ -1,5 +1,5 @@
 ---
-- name: Install packages
+- name: Install common packages
   ansible.builtin.dnf:
     name:
       - git
@@ -9,13 +9,3 @@
       - btop
       - vlc
     state: present
-
-- name: Remove packages
-  ansible.builtin.dnf:
-    name:
-      - rythmbox
-      - totem
-      - totem-plugins
-      - gnome-tour
-    state: absent
-    autoremove: true

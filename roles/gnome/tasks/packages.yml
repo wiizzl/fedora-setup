@@ -1,0 +1,10 @@
+---
+- name: Remove GNOME useless software
+  ansible.builtin.dnf:
+    name:
+      - rythmbox
+      - gnome-tour
+      - totem
+      - totem-plugins
+    state: absent
+    autoremove: yes

@@ -1,0 +1,5 @@
+---
+- name: Install Insomnia
+  community.general.flatpak:
+    name: rest.insomnia.Insomnia
+    state: present

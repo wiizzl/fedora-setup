@@ -1,6 +1,14 @@
 ---
+- name: Install GNOME extensions manager
+  community.general.flatpak:
+    name: com.mattjakeman.ExtensionManager
+    state: present
+
+- name: Install Gnome Extensions CLI
+  ansible.builtin.command: uv tool install gnome-extensions-cli
+
 - name: Install GNOME extensions
-  ansible.builtin.command: gnome-extensions install {{ item }}
+  ansible.builtin.command: gext install {{ item }}
   loop:
     - clipboard-indicator@tudmotu.com
     - Vitals@CoreCoding.com

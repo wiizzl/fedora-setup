@@ -3,3 +3,5 @@
   ansible.builtin.dnf:
     name: discord
     state: present
+#
+# TODO: Install Vencord
