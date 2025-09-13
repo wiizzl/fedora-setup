@@ -6,7 +6,9 @@
     mode: "0755"
 
 - name: Install Node Version Manager (nvm)
-  ansible.builtin.command: /tmp/install_nvm.sh
+  ansible.builtin.shell: /tmp/install_nvm.sh
+  args:
+    executable: /bin/bash
 
 - name: Install Node
-  ansible.builtin.shell: ". {{ ansible_env.SUDO_HOME }}/.nvm/nvm.sh && nvm install {{ node }}"
+  ansible.builtin.command: "nvm install {{ node }}"

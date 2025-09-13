@@ -1,0 +1,7 @@
+---
+- name: Install GNOME Tweaks & themes
+  ansible.builtin.dnf:
+    name:
+      - gnome-tweaks
+      - gnome-themes-extra
+    state: present

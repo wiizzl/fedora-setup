@@ -5,11 +5,8 @@
       - git
       - curl
       - wget
-      - gnome-tweaks
       - fastfetch
       - btop
-      - podman
-      - discord
       - vlc
     state: present
 

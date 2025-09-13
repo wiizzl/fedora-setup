@@ -1,3 +1,4 @@
+---
 - name: Download Bun install script
   ansible.builtin.get_url:
     url: https://bun.com/install
@@ -5,4 +6,6 @@
     mode: "0755"
 
 - name: Install Bun
-  ansible.builtin.command: /tmp/install_bun.sh
+  ansible.builtin.shell: /tmp/install_bun.sh
+  args:
+    executable: /bin/bash

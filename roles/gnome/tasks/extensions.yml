@@ -1,5 +1,5 @@
 ---
-- name: Installer des extensions GNOME spécifiques
+- name: Install GNOME extensions
   ansible.builtin.command: gnome-extensions install {{ item }}
   loop:
     - clipboard-indicator@tudmotu.com

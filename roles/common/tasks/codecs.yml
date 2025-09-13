@@ -2,13 +2,13 @@
 - name: Remove ffmpeg-free
   ansible.builtin.dnf:
     name: ffmpeg-free
-    allowerasing: yes
+    allowerasing: true
     state: absent
 
 - name: Add ffmpeg
   ansible.builtin.dnf:
     name: ffmpeg
-    allowerasing: yes
+    allowerasing: true
     state: present
 
 - name: Update @multimedia group

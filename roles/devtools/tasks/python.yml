@@ -6,4 +6,6 @@
     mode: "0755"
 
 - name: Install UV
-  ansible.builtin.command: /tmp/install_uv.sh
+  ansible.builtin.shell: /tmp/install_uv.sh
+  args:
+    executable: /bin/bash
