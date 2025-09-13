@@ -67,6 +67,6 @@
 
 - name: Apply VS Code settings
   ansible.builtin.copy:
-    src: { { vscode_settings } }
+    src: "{{ vscode_settings }}"
     dest: "{{ ansible_env.HOME }}/.config/Code/User/settings.json"
     remote_src: true
