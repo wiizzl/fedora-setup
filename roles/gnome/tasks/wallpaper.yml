@@ -1,0 +1,15 @@
+---
+- name: Download Wallpaper
+  ansible.builtin.get_url:
+    url: "{{ wallpaper_path }}"
+    dest: "{{ ansible_env.SUDO_HOME }}/Pictures/Wallpapers/{{ wallpaper_name}}"
+    mode: "0644"
+    force: true
+
+- name: Set Wallpaper
+  community.general.dconf:
+    key: /org/gnome/desktop/background/{{ item }}
+    value: "file://{{ ansible_env.SUDO_HOME }}/Pictures/Wallpapers/{{ wallpaper_name }}"
+    loop:
+      - picture-uri
+      - picture-uri-dark
