@@ -17,7 +17,7 @@
 - name: Set Wallpaper
   community.general.dconf:
     key: "/org/gnome/desktop/background/{{ item }}"
-    value: "file://{{ ansible_env.SUDO_HOME }}/Pictures/Wallpapers/{{ wallpaper_name }}"
+    value: "'file://{{ ansible_env.SUDO_HOME }}/Pictures/Wallpapers/{{ wallpaper_name }}'"
   loop:
     - picture-uri
     - picture-uri-dark
