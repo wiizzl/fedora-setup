@@ -1,7 +1,7 @@
 ---
 - name: Enable Ghostty copr repo
   community.general.copr:
-    name: scottames/ghostty
+    name: pgdev/ghostty
     state: enabled
 
 - name: Install Ghostty
