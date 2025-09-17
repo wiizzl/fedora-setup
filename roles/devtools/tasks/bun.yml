@@ -8,6 +8,7 @@
   unarchive:
     src: /tmp/bun.zip
     dest: "{{ ansible_env.SUDO_HOME }}/.bun/bin"
+    remote_src: true
     creates: "{{ ansible_env.SUDO_HOME }}/.bun/bin/bun"
 
 - name: Add Bun to PATH
