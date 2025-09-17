@@ -56,11 +56,6 @@
     - dsznajder.es7-react-js-snippets
     - imgildev.vscode-drizzle-snippets
     - astro-build.astro-vscode
-    - ms-python.python
-    - ms-python.vscode-pylance
-    - ms-python.debugpy
-    - ms-python.vscode-python-envs
-    - charliermarsh.ruff
 
 - name: Download VS Code settings
   ansible.builtin.get_url:

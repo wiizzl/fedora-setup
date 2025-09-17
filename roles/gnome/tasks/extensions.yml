@@ -5,7 +5,7 @@
     state: present
 
 - name: Install Gnome Extensions CLI
-  ansible.builtin.command: uv tool install gnome-extensions-cli
+  ansible.builtin.command: pipx install gnome-extensions-cli --system-site-packages
 
 - name: Install GNOME extensions
   ansible.builtin.command: gext install {{ item }}

@@ -1,0 +1,17 @@
+---
+- name: Install pip and pipx
+  ansible.builtin.dnf:
+    name:
+      - python3-pip
+      - pipx
+    state: present
+
+- name: Install Python support for VS Code
+  become: false
+  ansible.builtin.command: code --install-extension {{ item }} --force
+  loop:
+    - ms-python.python
+    - ms-python.vscode-pylance
+    - ms-python.debugpy
+    - ms-python.vscode-python-envs
+    - charliermarsh.ruff
