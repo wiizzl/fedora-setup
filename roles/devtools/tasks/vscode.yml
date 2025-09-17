@@ -19,10 +19,8 @@
     state: present
 
 - name: Install VS Code extensions
-  become: false
   ansible.builtin.command: code --install-extension {{ item }} --force
   loop:
-    - astro-build.astro-vscode
     - formulahendry.auto-close-tag
     - formulahendry.auto-rename-tag
     - adpyke.codesnap
@@ -30,37 +28,19 @@
     - ms-azuretools.vscode-containers
     - ms-vscode-remote.remote-containers
     - icrawl.discord-vscode
-    - imgildev.vscode-drizzle-snippets
     - usernamehw.errorlens
-    - dsznajder.es7-react-js-snippets
-    - dbaeumer.vscode-eslint
-    - expo.vscode-expo-tools
     - thang-nm.flow-icons
     - github.vscode-github-actions
     - GitHub.copilot
     - GitHub.copilot-chat
     - GitHub.github-vscode-theme
-    - golang.go
     - ms-vsliveshare.vsliveshare
     - PKief.material-product-icons
     - unifiedjs.vscode-mdx
-    - quicktype.quicktype
     - johnpapa.vscode-peacock
     - esbenp.prettier-vscode
-    - YoavBls.pretty-ts-errors
-    - Prisma.prisma
-    - AbianS.prisma-generate-uml
-    - ms-python.python
-    - ms-python.vscode-pylance
-    - ms-python.debugpy
-    - ms-python.vscode-python-envs
     - ms-vscode-remote.remote-ssh
     - ms-vscode.remote-explorer
-    - charliermarsh.ruff
-    - rust-lang.rust-analyzer
-    - bradlc.vscode-tailwindcss
-    - tauri-apps.tauri-vscode
-    - meganrogge.template-string-converter
     - wayou.vscode-todo-highlight
     - pflannery.vscode-versionlens
     - redhat.vscode-yaml

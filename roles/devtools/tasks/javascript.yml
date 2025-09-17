@@ -1,0 +1,20 @@
+---
+- name: Install Bun
+  shell: curl -fsSL https://bun.com/install | bash
+  args:
+    creates: ~/.bun/bin/bun
+
+- name: Install JS support for VS Code
+  ansible.builtin.command: code --install-extension {{ loop }} --force
+  loop:
+    - bradlc.vscode-tailwindcss
+    - meganrogge.template-string-converter
+    - YoavBls.pretty-ts-errors
+    - Prisma.prisma
+    - AbianS.prisma-generate-uml
+    - quicktype.quicktype
+    - dbaeumer.vscode-eslint
+    - expo.vscode-expo-tools
+    - dsznajder.es7-react-js-snippets
+    - imgildev.vscode-drizzle-snippets
+    - astro-build.astro-vscode

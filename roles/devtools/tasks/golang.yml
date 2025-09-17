@@ -3,3 +3,6 @@
   ansible.builtin.dnf:
     name: go
     state: present
+
+- name: Install Golang support for VS Code
+  ansible.builtin.command: code --install-extension golang.go --force

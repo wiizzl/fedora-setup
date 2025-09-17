@@ -9,3 +9,12 @@
   ansible.builtin.shell: /tmp/install_uv.sh
   args:
     executable: /bin/bash
+
+- name: Install Python support for VS Code
+  ansible.builtin.command: code --install-extension {{ loop }} --force
+  loop:
+    - ms-python.python
+    - ms-python.vscode-pylance
+    - ms-python.debugpy
+    - ms-python.vscode-python-envs
+    - charliermarsh.ruff
