@@ -14,7 +14,6 @@
     path: "{{ ansible_env.SUDO_HOME }}/.bashrc"
     line: 'eval "$(starship init bash)"'
     insertafter: EOF
-    state: present
 
 # - name: Enable Starship for Fish
 #   ansible.builtin.lineinfile:

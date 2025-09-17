@@ -1,11 +1,18 @@
 ---
-- name: Download Bun install script
+- name: Download Bun
   ansible.builtin.get_url:
-    url: https://bun.com/install
-    dest: /tmp/install_bun.sh
-    mode: "0755"
+    url: "https://github.com/oven-sh/bun/releases/latest/download/bun-linux-x64.zip"
+    dest: /tmp/bun.zip
 
 - name: Install Bun
-  ansible.builtin.shell: /tmp/install_bun.sh
-  args:
-    executable: /bin/bash
+  ansible.builtin.unarchive:
+    src: /tmp/bun.zip
+    dest: ~/.bun/bin
+    remote_src: yes
+    creates: ~/.bun/bin/bun
+
+- name: Add Bun to PATH
+  ansible.builtin.lineinfile:
+    path: "{{ ansible_env.SUDO_HOME }}/.bashrc"
+    line: 'export PATH="$HOME/.bun/bin:$PATH"'
+    insertafter: EOF
