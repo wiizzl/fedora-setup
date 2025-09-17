@@ -1,7 +1,7 @@
 ---
 - name: Download Bun
   get_url:
-    url: "https://github.com/oven-sh/bun/releases/latest/download/bun-linux64.zip"
+    url: "https://github.com/oven-sh/bun/releases/latest/download/bun-linux-x64.zip"
     dest: /tmp/bun.zip
 
 - name: Install Bun
