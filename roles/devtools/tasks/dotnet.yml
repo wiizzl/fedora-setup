@@ -3,6 +3,3 @@
   ansible.builtin.dnf:
     name: dotnet-sdk-{{ dotnet }}
     state: present
-
-- name: Install Avalonia templates
-  ansible.builtin.command: dotnet new install Avalonia.Templates
