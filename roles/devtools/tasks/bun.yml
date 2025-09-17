@@ -7,9 +7,8 @@
 - name: Install Bun
   unarchive:
     src: /tmp/bun.zip
-    dest: ~/.bun/bin
-    remote_src: yes
-    creates: ~/.bun/bin/bun
+    dest: "{{ ansible_env.SUDO_HOME }}/.bun/bin"
+    creates: "{{ ansible_env.SUDO_HOME }}/.bun/bin/bun"
 
 - name: Add Bun to PATH
   lineinfile:
