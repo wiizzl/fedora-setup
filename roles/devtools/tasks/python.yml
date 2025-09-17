@@ -12,7 +12,7 @@
 
 - name: Install Python support for VS Code
   become: false
-  ansible.builtin.command: code --install-extension {{ loop }} --force
+  ansible.builtin.command: code --install-extension {{ item }} --force
   loop:
     - ms-python.python
     - ms-python.vscode-pylance
