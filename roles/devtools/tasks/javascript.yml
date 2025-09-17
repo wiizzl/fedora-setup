@@ -5,6 +5,7 @@
     creates: ~/.bun/bin/bun
 
 - name: Install JS support for VS Code
+  become: false
   ansible.builtin.command: code --install-extension {{ loop }} --force
   loop:
     - bradlc.vscode-tailwindcss

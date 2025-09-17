@@ -19,6 +19,7 @@
     state: present
 
 - name: Install VS Code extensions
+  become: false
   ansible.builtin.command: code --install-extension {{ item }} --force
   loop:
     - formulahendry.auto-close-tag
