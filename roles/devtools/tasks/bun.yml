@@ -4,6 +4,8 @@
     path: "{{ ansible_env.SUDO_HOME }}/.bun/bin"
     state: directory
     mode: "0755"
+    owner: pier
+    group: pier
 
 - name: Install Bun using official install script
   shell: curl -fsSL https://bun.com/install | bash
