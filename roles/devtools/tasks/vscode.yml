@@ -45,6 +45,17 @@
     - wayou.vscode-todo-highlight
     - pflannery.vscode-versionlens
     - redhat.vscode-yaml
+    - bradlc.vscode-tailwindcss
+    - meganrogge.template-string-converter
+    - YoavBls.pretty-ts-errors
+    - Prisma.prisma
+    - AbianS.prisma-generate-uml
+    - quicktype.quicktype
+    - dbaeumer.vscode-eslint
+    - expo.vscode-expo-tools
+    - dsznajder.es7-react-js-snippets
+    - imgildev.vscode-drizzle-snippets
+    - astro-build.astro-vscode
 
 - name: Download VS Code settings
   ansible.builtin.get_url:

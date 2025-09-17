@@ -1,0 +1,5 @@
+---
+- name: Install Bun
+  shell: curl -fsSL https://bun.com/install | bash
+  args:
+    creates: ~/.bun/bin/bun
