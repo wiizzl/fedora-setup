@@ -1,7 +1,0 @@
----
-- name: Install Fish shell
-  ansible.builtin.dnf:
-    name: fish
-    state: present
-#
-# TODO: set fish as default shell

@@ -9,7 +9,6 @@
 - include_tasks: java.yml
 # - include_tasks: python.yml
 - include_tasks: podman.yml
-- include_tasks: fish.yml
 - include_tasks: starship.yml
 - include_tasks: insomnia.yml
 - include_tasks: dbeaver.yml

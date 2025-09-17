@@ -15,12 +15,5 @@
     line: 'eval "$(starship init bash)"'
     insertafter: EOF
 
-# - name: Enable Starship for Fish
-#   ansible.builtin.lineinfile:
-#     path: "{{ ansible_env.SUDO_HOME }}/.config/fish/config.fish"
-#     line: '\n#Starship\nstarship init fish | source'
-#     insertafter: EOF
-#     state: present
-
 - name: Enable Nerd Fonts icons for Starship
   ansible.builtin.command: starship preset nerd-font-symbols -o {{ ansible_env.SUDO_HOME }}/.config/starship.toml
