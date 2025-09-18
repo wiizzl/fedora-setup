@@ -1,5 +1,5 @@
 ---
-fedora: 42
+fedora: 43
 rpmfusion_keys: 2020 # https://rpmfusion.org/keys
 dotnet: 9.0 # https://dotnet.microsoft.com/en-us/download/dotnet
 java: 21 # https://docs.fedoraproject.org/fr/quick-docs/installing-java/
