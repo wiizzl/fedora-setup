@@ -1,0 +1,15 @@
+---
+- name: Install fastfetch
+  ansible.builtin.dnf:
+    name: fastfetch
+    state: present
+
+- name: Generate default config for fastfetch
+  ansible.builtin.command: fastfetch --gen-config
+#
+# TODO: Load custom config
+# - name: Load custom fastfetch config
+#   ansible.builtin.copy:
+#     src: files/fastfetch/fastfetch.conf
+#     dest: ~/.config/fastfetch/config.jsonc
+#     mode: "0644"

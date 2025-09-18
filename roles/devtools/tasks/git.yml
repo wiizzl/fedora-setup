@@ -1,0 +1,8 @@
+---
+- name: Install git
+  ansible.builtin.dnf:
+    name: git
+    state: present
+
+- name: Configure git
+  ansible.builtin.command: "git config --global user.name '{{ git_username }}' && git config --global user.email '{{ git_email }}'"

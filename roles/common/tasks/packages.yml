@@ -6,6 +6,5 @@
       - unzip
       - curl
       - wget
-      - fastfetch
       - vlc
     state: present

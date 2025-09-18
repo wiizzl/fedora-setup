@@ -9,3 +9,5 @@
 - include_tasks: starship.yml
 - include_tasks: insomnia.yml
 - include_tasks: dbeaver.yml
+- include_tasks: fastfetch.yml
+- include_tasks: git.yml

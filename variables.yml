@@ -5,6 +5,9 @@ dotnet: 9.0 # https://dotnet.microsoft.com/en-us/download/dotnet
 java: 21 # https://docs.fedoraproject.org/fr/quick-docs/installing-java/
 node: 22 # https://nodejs.org/en/download
 
+git_email: github@houlliere.com
+git_username: wiizzl
+
 vscode_settings: https://gist.githubusercontent.com/wiizzl/4b221506171597a4eec703b8f0c23998/raw/config.json
 
 wallpaper_path: https://static1.squarespace.com/static/5e949a92e17d55230cd1d44f/t/68c330ceaa1d61198450776d/1757622615329/20250911_Mac.jpg
