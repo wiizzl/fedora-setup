@@ -1,23 +1,10 @@
 ---
-- name: Ensure Wallpapers directory exists
-  ansible.builtin.file:
-    path: "{{ ansible_env.SUDO_HOME }}/Pictures/Wallpapers"
-    state: directory
-    mode: "0755"
-    owner: "{{ ansible_env.SUDO_USER }}"
-    group: "{{ ansible_env.SUDO_USER }}"
-
-- name: Download Wallpaper
-  ansible.builtin.get_url:
-    url: "{{ wallpaper_path }}"
-    dest: "{{ ansible_env.SUDO_HOME }}/Pictures/Wallpapers/{{ wallpaper_name}}"
-    mode: "0644"
-    force: true
-
-- name: Set Wallpaper
+- name: Set Light Wallpaper
   community.general.dconf:
-    key: "/org/gnome/desktop/background/{{ item }}"
-    value: "'file://{{ ansible_env.SUDO_HOME }}/Pictures/Wallpapers/{{ wallpaper_name }}'"
-  loop:
-    - picture-uri
-    - picture-uri-dark
+    key: /org/gnome/desktop/background/picture-uri
+    value: "file://{{ wallpaper-light }}"
+
+- name: Set Dark Wallpaper
+  community.general.dconf:
+    key: /org/gnome/desktop/background/picture-uri-dark
+    value: "file://{{ wallpaper-dark }}"
