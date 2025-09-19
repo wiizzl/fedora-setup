@@ -1,6 +1,6 @@
 ---
 - name: Install Rust support for VS Code
-  # become: false
+  become: false
   ansible.builtin.command: code --install-extension {{ item }} --force
   loop:
     - rust-lang.rust-analyzer
