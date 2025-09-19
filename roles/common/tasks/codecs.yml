@@ -1,6 +1,5 @@
 ---
 - name: Remove ffmpeg-free
-  become_user: root
   ansible.builtin.dnf:
     name: ffmpeg-free
     allowerasing: true

@@ -5,6 +5,7 @@
     state: present
 
 - name: Configure git
+  become: false
   ansible.builtin.command: >
     git config --global user.name "{{ git_username }}"
     && git config --global user.email "{{ git_email }}"
