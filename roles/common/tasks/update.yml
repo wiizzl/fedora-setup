@@ -1,6 +1,5 @@
 ---
 - name: Update all packages
-  become: true
   become_user: root
   ansible.builtin.dnf:
     name: "*"
