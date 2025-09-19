@@ -1,7 +1,8 @@
 ---
 - hosts: localhost
   become: true
-  # become_user: "{{ lookup('env', 'USER') }}"
+  become_method: sudo
+  become_user: "{{ lookup('env', 'USER') }}"
   vars_files: variables.yml
   roles:
     - common

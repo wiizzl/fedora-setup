@@ -5,5 +5,5 @@
     state: present
 
 - name: Install Golang support for VS Code
-  become: false
+  # become: false
   ansible.builtin.command: code --install-extension golang.go --force
