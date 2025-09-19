@@ -1,7 +1,9 @@
 ---
-- name: Install git
+- name: Install GIT & GitHub CLI
   ansible.builtin.dnf:
-    name: git
+    name:
+      - git
+      - gh
     state: present
 
 - name: Configure git user.email
