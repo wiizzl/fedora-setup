@@ -4,8 +4,14 @@
     name: git
     state: present
 
-- name: Configure git
-  become: false
-  ansible.builtin.command: >
-    git config --global user.name "{{ git_username }}"
-    && git config --global user.email "{{ git_email }}"
+- name: Configure git user.email
+  git_config:
+    name: user.email
+    scope: global
+    value: "{{ git_email }}"
+
+- name: Configure git user.name
+  git_config:
+    name: user.name
+    scope: global
+    value: "{{ git_username }}"
