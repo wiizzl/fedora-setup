@@ -6,7 +6,7 @@
 
 - name: Generate default config for fastfetch
   become: false
-  ansible.builtin.command: fastfetch --gen-config
+  ansible.builtin.command: fastfetch --gen-config-force
 #
 # TODO: Load custom config
 # - name: Load custom fastfetch config
