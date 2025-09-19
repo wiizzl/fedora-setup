@@ -1,10 +1,12 @@
 ---
 - name: Set Light Wallpaper
+  become: false
   community.general.dconf:
     key: /org/gnome/desktop/background/picture-uri
     value: "'file://{{ wallpaper_light }}'"
 
 - name: Set Dark Wallpaper
+  become: false
   community.general.dconf:
     key: /org/gnome/desktop/background/picture-uri-dark
     value: "'file://{{ wallpaper_dark }}'"
