@@ -6,5 +6,5 @@
       - unzip
       - curl
       - wget
-      - vlc
+      - tldr
     state: present

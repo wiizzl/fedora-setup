@@ -16,3 +16,8 @@
     name: "@multimedia"
     state: latest
     exclude: PackageKit-gstreamer-plugin
+
+- name: Install VLC
+  ansible.builtin.dnf:
+    name: vlc
+    state: present
